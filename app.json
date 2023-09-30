@@ -1,7 +1,7 @@
 {
     "name": "PROFESSOR-BOT",
     "description": "The Telegram Autofilter Bot",
-    "logo": "https://graph.org/file/b7e8484f6395a180b6380.jpg",
+    "logo": "https://telegra.ph/file/3f03b8c300ca96058eb58.jpg",
     "keywords": ["Telegram", "auto-filter", "MrMKN"],
     "repository": "https://github.com/MrMKN/PROFESSOR-BOT",
     "env": {
