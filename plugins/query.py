@@ -172,7 +172,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             except Exception as e: logger.exception(e)
         try:                  
             if AUTH_CHANNEL and not await is_subscribed(client, query):
-                return await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                return await query.answer(url=f"https://t.me/{temp.U_Contact_Star_Plus_Bot}?start={ident}_{file_id}")
             else:
                 await client.send_cached_media(chat_id=query.from_user.id, file_id=file_id, caption=f_caption, protect_content=True if ident == "pmfilep" else False)                       
         except Exception as e:
@@ -210,7 +210,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
      
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            return await query.answer("I Lɪᴋᴇ Yᴏᴜʀ Sᴍᴀʀᴛɴᴇss, Bᴜᴛ Dᴏɴ'ᴛ Bᴇ Oᴠᴇʀsᴍᴀʀᴛ Oᴋᴀʏ 😏", show_alert=True)
+            return await query.answer("J'aime ton intelligence, mais ne sois pas trop intelligent 😏", show_alert=True)
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
         if not files_: return await query.answer('NO SUCH FILE EXIST....')
@@ -429,13 +429,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":                        
         buttons = [[
-            InlineKeyboardButton("➕️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+            InlineKeyboardButton("➕️ 𝙰𝙹𝙾𝚄𝚃𝙴𝚉-𝙼𝙾𝙸 𝙰 𝚅𝙾𝚂 𝙶𝚁𝙾𝚄𝙿𝙴𝚂 ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
             InlineKeyboardButton("Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://telegram.dog/AdultPlusCornerUpdates")
+            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://telegram.dog/seri_lakay")
             ],[      
             InlineKeyboardButton("Hᴇʟᴩ 🕸️", callback_data="help"),
-            InlineKeyboardButton("Aʙᴏᴜᴛ ✨", callback_data="about")
+            InlineKeyboardButton("Aʙᴏᴜᴛ ✨", 🤖 𝙼𝚈𝚂𝙴𝙻𝙵 : proғeѕor
+👨‍💻 𝙲𝚛𝚎𝚊𝚝𝚘𝚛 : ✪ zoѕ-мan ✪
+📝 𝙻𝚊𝚗𝚐𝚞𝚊𝚐𝚎 : ᴘʏʀᴏɢʀᴀᴍ
+📚 𝙵𝚛𝚊𝚖𝚎𝚠𝚘𝚛𝚔 : ᴘʏᴛʜᴏɴ 3
+📡 𝙷𝚘𝚜𝚝𝚎𝚍 𝙾𝚗 : нeroĸυ 
+📢 𝐌𝐀𝚰𝐍 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 : 𝕁𝕆𝕀ℕ
+🌟 𝚅𝚎𝚛𝚜𝚒𝚘𝚗 : ᴠ 4.0="about")
         ]]
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), START_MESSAGE.format(user=query.from_user.mention, bot=client.mention), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
        
@@ -468,7 +474,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', url='https://github.com/MrMKN/PROFESSOR-BOT')
+            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', url='https://t.me/Contact_Star_Plus_Bot')
             ],[
             InlineKeyboardButton('‹ Bᴀᴄᴋ', 'about')
         ]]
