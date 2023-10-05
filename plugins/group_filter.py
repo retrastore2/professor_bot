@@ -330,7 +330,7 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = await msg.reply("Movie Not Available! Check Your Spelling, Join This Channel For Movie List @Adult , Just Copy Paste From There.")
-        await asyncio.sleep(8)
+        await asyncio.sleep()
         return await k.delete()
     temp.GP_SPELL[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"spolling#{user}#{k}",)] for k, movie in enumerate(movielist)]
