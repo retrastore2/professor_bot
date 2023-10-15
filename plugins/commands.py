@@ -32,15 +32,17 @@ async def start(client, message):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention, message.from_user.username, temp.U_NAME))
     if len(message.command) != 2:
-        buttons = [[
-            InlineKeyboardButton("➕️ ADD ME TO YOUR GROUP ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+        buttons =  [[
+            InlineKeyboardButton("➕️ AJOUTEZ-MOI À VOS GROUPES ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
-            InlineKeyboardButton("Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://telegram.dog/AdultPlusCornerUpdates")
+            InlineKeyboardButton("🔎 𝐑𝐄𝐂𝐇𝐄𝐑𝐂𝐇𝐄𝐑", switch_inline_query_current_chat=''), 
+            InlineKeyboardButton("🤖 𝐍𝐨𝐮𝐯𝐞𝐥𝐥𝐞𝐬", url="https://t.me/StarPlus_Cinema")
             ],[      
-            InlineKeyboardButton("Hᴇʟᴩ 🕸️", callback_data="help"),
-            InlineKeyboardButton("Aʙᴏᴜᴛ ✨", callback_data="about")
-        ]]
+            InlineKeyboardButton("ℹ️ 𝐀𝐈𝐃𝐄𝐒", callback_data="help"),
+            InlineKeyboardButton("❤️ 𝐀 𝐏𝐑𝐎𝐏𝐎𝐒 ❤️", callback_data="about")
+            ],[
+            InlineKeyboardButton('Watch Tutorial', url='https://www.youtube.com/@ZMO-Tech')
+            ]]
         m = await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ") 
         await asyncio.sleep(2)
         await message.reply_photo(photo=random.choice(PICS), caption=START_MESSAGE.format(user=message.from_user.mention, bot=client.mention), reply_markup=InlineKeyboardMarkup(buttons), parse_mode=enums.ParseMode.HTML)
@@ -68,15 +70,17 @@ async def start(client, message):
             return await client.send_message(chat_id=message.from_user.id, text=script.FORCE_SUB_TEXT, reply_markup=InlineKeyboardMarkup(btn), parse_mode=enums.ParseMode.DEFAULT)
         
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
-        buttons = [[
-            InlineKeyboardButton("➕️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+        buttons =  [[
+            InlineKeyboardButton("➕️ AJOUTEZ-MOI À VOS GROUPES ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
-            InlineKeyboardButton("Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://telegram.dog/AdultPlusCornerUpdates")
+            InlineKeyboardButton("🔎 𝐑𝐄𝐂𝐇𝐄𝐑𝐂𝐇𝐄𝐑", switch_inline_query_current_chat=''), 
+            InlineKeyboardButton("🤖 𝐍𝐨𝐮𝐯𝐞𝐥𝐥𝐞𝐬", url="https://t.me/StarPlus_Cinema")
             ],[      
-            InlineKeyboardButton("Hᴇʟᴩ 🕸️", callback_data="help"),
-            InlineKeyboardButton("Aʙᴏᴜᴛ ✨", callback_data="about")
-        ]]
+            InlineKeyboardButton("ℹ️ 𝐀𝐈𝐃𝐄𝐒", callback_data="help"),
+            InlineKeyboardButton("❤️ 𝐀 𝐏𝐑𝐎𝐏𝐎𝐒 ❤️", callback_data="about")
+            ],[
+            InlineKeyboardButton('Watch Tutorial', url='https://www.youtube.com/@ZMO-Tech')
+            ]]
         m = await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ")
         await asyncio.sleep(2)
         await message.reply_photo(photo=random.choice(PICS), caption=START_MESSAGE.format(user=message.from_user.mention, bot=client.mention), reply_markup=InlineKeyboardMarkup(buttons), parse_mode=enums.ParseMode.HTML)
