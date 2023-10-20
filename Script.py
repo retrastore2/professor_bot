@@ -1,19 +1,60 @@
-class script(object):  
-    START_TXT = """<b>✨ Hᴇʟʟᴏ {user}.
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# (c) @AlbertEinsteinTG
 
-Mʏ Nᴀᴍᴇ Is {bot}.
-
-I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇ Fᴏʀ Yᴏᴜ Jᴜsᴛ Aᴅᴅ Mᴇ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ Oʀ Jᴏɪɴ Oᴜʀ Gʀᴏᴜᴘ</b>"""
+class Translation(object):
     
-    HELP_TXT = "Hᴇʏ {}\n𝚅𝙾𝙸𝙲𝙸 𝙻’𝙰𝙸𝙳𝙴 𝙿𝙾𝚄𝚁 𝙼𝙴𝚂 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝙴𝚂."
+    START_TEXT = """<b><u>Hey {} How Are You!!</b></u>
+<i>Am Just A Advance Auto Filter Bot....😉
 
-ABOUT_TXT = """<b>✯ 𝙼𝙾𝙽 𝙽𝙾𝙼: {𝐏𝐑𝐎𝐅𝐄𝐒𝐎𝐑}
-✯ 𝙲𝚁𝙴𝙰𝚃𝙴𝚄𝚁: <a herf=https://t.me/zosman_official>✪ zoѕ-мan ✪</a>
-✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
-✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
-✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: ᴍᴏɴɢᴏ-ᴅʙ
-✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙷𝙴𝚁𝙾𝙺𝚄
-✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: ᴩʀᴏꜰᴇꜱꜱᴏʀ-ʙᴏᴛ ᴠ4.5.0 [ BETA ]</b>"""
+Then Search For Any Released Movies..🔥🔥😝
+
+For More Details Click Help Button Below..
+@Rejoindeznous
+</i>"""    
+    
+    HELP_TEXT = """
+<b><i><u>How To Use Me!?</u></i></b>
+
+<i>
+-> Add Me To Any Group And Make Me Admin
+-> Add Me To Your Desired Channel
+</i>
+
+<b>Bot Commands (Works Only In Groups) :</b>
+
+    -> <code>/add chat_id</code>
+                OR                  - To Connect A Group With A Channel (Bot Should Be Admin With Full Previlages In Both Group And Channel)
+     <code>/add @Username</code>
+     
+    -> <code>/del chat_id</code>
+                OR                  - To disconnect A Group With A Channel
+     <code>/del @Username</code>
+     
+    -> <code>/delall</code>  - This Command Will Disconnect All Connected Channel With The Group And Deletes All Its File From DB
+    
+    -> <code>/settings</code> -  This Command Will Display You A Settings Pannel Instance Which Can Be Used To Tweek Bot's Settings Accordingly
+
+            -> <code>Channel</code> - Button Will Show You All The Connected Chats With The Group And Will Show Buttons Correspnding To There Order For Furthur Controls
+            
+            -> <code>Filter Types</code> - Button Will Show You The 3 Filter Option Available In Bot... Pressing Each Buttons Will Either Enable or Disable Them And This Will Take Into Action As Soon As You Use Them Without The Need Of A Restart
+
+            -> <code>Configure</code> - Button Will Helps You To Change No. of Pages/ Buttons Per Page/ Total Result Without Acutally Editing The Repo... Also It Provide Option To Enable/Disable For Showing Invite Link In Each Results
+            
+            -> <code>Status</code> - Button Will Shows The Stats Of Your Channel
+            
+"""
+    
+    ABOUT_TEXT = """<b>➥ Name</b> : <code> Auto Filter Bot</code>
+    
+<b>➥ Creator</b> : <b><i><a href="https://t.me/zosman_official">Zosman</a></i></b>
+
+<b>➥ Language</b> : <code>Python3</code>
+
+<b>➥ Library</b> : <i><a href="https://docs.pyrogram.org">Pyrogram Asyncio 1.13.0 </a></i>
+
+<b>➥ Source Code</b> : <i><a href="https://github.com/retrastore2/AutoFilterBotv2">Click Me</a></i>
+"""
 
     SOURCE_TXT = """<b>NOTE:</b>
 - ꜱᴏᴜʀᴄᴇ ◉› :<a href=https://t.me/Hyman_Official>𝐇𝐘𝐌𝐀𝐍</a>
